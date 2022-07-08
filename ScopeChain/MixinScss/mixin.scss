@@ -1,0 +1,32 @@
+
+
+// # is used for generate something dynamically
+// $ is used for passing arguments and variab🇱🇸
+// @ is used for define if , for etc looping
+
+@mixin margin-padding($num){
+    // @if($num){
+        @for $i from 1 through 6 {
+            .m-#{$num * $i}{
+                margin: $num * $i+px;
+            }
+            .p-#{$num * $i}{
+                padding: $num * $i+px;
+            }
+            .pt-#{$num * $i}{
+                padding-top: $num * $i+px;
+            }
+            .pb-#{$num * $i}{
+                padding-bottom: $num * $i+px;
+            }
+            .pl-#{$num * $i}{
+                padding-left: $num * $i+px;
+            }
+            .pr-#{$num * $i}{
+                padding-right: $num * $i+px;
+            }
+        }
+    // }
+}
+@include margin-padding(2);
+@include margin-padding(10);

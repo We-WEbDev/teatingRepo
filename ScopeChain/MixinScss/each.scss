@@ -1,0 +1,28 @@
+$font : (normal, bold);
+$list : flex;
+
+
+@each $i in $font {
+    .#{$i}{
+        font-weight: $i;
+    } 
+};
+
+@each $name in $list{
+    .flex{
+        display: $name;
+    }
+} 
+
+
+// mixin 
+
+@mixin padding($n){
+    @for $i from 1 through 6{
+        .p-#{$n * $i}{
+            padding:$n * $i+px;
+        }
+    }
+}
+@include padding(2);
+@include padding(10);

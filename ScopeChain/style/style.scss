@@ -1,0 +1,73 @@
+@forward 'Globel';
+// @use 'Globel' as var;
+
+// .parent{
+//     width: 100%;
+//     min-height: 100vh;
+//     background-color: var.$backgroundColor;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+
+//     &__child{
+        
+//         width: 300px;
+//         // height: 200px;
+//         // border: 1px solid $border;
+//         background-color: var.$child;
+//         border-radius: 7px;
+//         overflow: hidden;
+//         text-align: center;
+//         -webkit-box-shadow: -7px 2px 15px -6px rgba(227,227,227,1);
+//         -moz-box-shadow: -7px 2px 15px -6px rgba(227,227,227,1);
+//         box-shadow: -7px 2px 15px -6px rgba(227,227,227,1);
+//         cursor: pointer;
+//         transition: all 0.3s ease-in-out;
+
+//         &:hover{
+//             transform: scale(1.1);
+//         }
+//         .Img{
+//             width: 100%;
+//             height: 50%;
+
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//             }
+//         }
+
+//         p{
+//             padding: 10px;
+//             font-size: 1rem;
+//         }
+
+//         @media screen and (max-width: 768px){
+//             width: 80%;
+//             margin: 10px 0;
+//         }
+//     }
+// }
+
+// jixih61813@meidir.com
+
+@mixin padding-margin($num){
+
+    // @if ($num){
+        @for $i from 1 through 5 {
+            //for padding top 
+            .pt-#{$num * $i}{
+                padding-top: $num * $i+px ;
+            }
+            //for padding bottom 
+            .pb-#{$num * $i}{
+                padding-bottom: $num * $i+px ;
+            }
+        // }  
+    }
+}
+@include padding-margin(2);
+@include padding-margin(10);
